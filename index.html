@@ -9,21 +9,32 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <input type="text" id="heading_input" placeholder="Title">    
-    <button id="submitbtn">Submit</button>
-
+    <div id="form">
+        <input type="text" id="heading_input" placeholder="Title">
+        <input type="text" id="subtitle_input" placeholder="Subtitle">    
+        <button id="submitbtn">Submit</button>
+    </div>
     
-    <h1 id="output_heading">hello</h1>
+    <h1 id="output_heading"></h1>
+    <h3 id="output_subtitle"></h3>
 
     <script>
         const heading_input = document.getElementById("heading_input");
         const output_heading = document.getElementById("output_heading");
+        const subtitle_input = document.getElementById("subtitle_input");
+        const output_subtitle = document.getElementById("output_subtitle");
         const submitbtn = document.getElementById("submitbtn");
 
         submitbtn.addEventListener("click" , ()=> {
+
+            document.getElementById("form").style.display = "none";
             const inputtext = heading_input.value;
             output_heading.innerHTML = inputtext;
+
+            const inputtext2 = subtitle_input.value;
+            output_subtitle.innerHTML = inputtext2;
+
+            
         });
 
     </script>
