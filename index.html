@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+</head>
+<body>
+   
+    <input type="text" id="heading_input" placeholder="Title">    
+    <button id="submitbtn">Submit</button>
+
+    
+    <h1 id="output_heading">hello</h1>
+
+    <script>
+        const heading_input = document.getElementById("heading_input");
+        const output_heading = document.getElementById("output_heading");
+        const submitbtn = document.getElementById("submitbtn");
+
+        submitbtn.addEventListener("click" , ()=> {
+            const inputtext = heading_input.value;
+            output_heading.innerHTML = inputtext;
+        });
+
+    </script>
+</body>
+</html>
